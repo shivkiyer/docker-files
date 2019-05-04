@@ -9,4 +9,6 @@ RUN pip3 install django && \
     pip3 install PyJWT && \
     pip3 install pandas
 
+RUN apt-get install -y procps
+
 EXPOSE 8000-9000
