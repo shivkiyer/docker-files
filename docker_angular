@@ -6,7 +6,7 @@ RUN apt-get update && \
 
 RUN apt-get install -y build-essential checkinstall libssl-dev
 
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash
 
 RUN apt-get install -y nodejs
 
@@ -15,9 +15,9 @@ RUN apt-get update
 RUN npm -v
 
 RUN npm cache clean -f && \
-npm install -g @angular/cli@6
+npm install -g @angular/cli@8
 
 RUN apt-get install -y procps
 
 EXPOSE 3000-4000
-EXPOSE 8000-9000
+EXPOSE 8000-10000
